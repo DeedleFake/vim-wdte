@@ -25,9 +25,11 @@ highlight default link wdteString String
 syntax region wdteSwitch start=+{+ end=+}+ transparent
 syntax region wdteArray start=+\[+ end=+\]+ transparent
 syntax region wdteCompound start=+(+ end=+)+ transparent
+syntax region wdteLambda start=+(@+ end=+)+ transparent
 highlight default link wdteSwitch Operator
 highlight default link wdteArray Operator
 highlight default link wdteCompound Operator
+highlight default link wdteLambda Operator
 
 syntax match wdteSub "\."
 syntax match wdteChain "->"
@@ -35,13 +37,11 @@ syntax match wdteAssign "=>"
 syntax match wdteExprEnd ";"
 syntax match wdteSlot ":"
 syntax match wdteIgnoredChain "--"
-syntax match wdteLambda "(@"
 highlight default link wdteSub Operator
 highlight default link wdteChain Operator
 highlight default link wdteAssign Operator
 highlight default link wdteExprEnd Operator
 highlight default link wdteSlot Operator
 highlight default link wdteIgnoredChain Operator
-highlight default link wdteLambda Operator
 
 let b:current_syntax = "wdte"
